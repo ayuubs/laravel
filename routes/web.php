@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/s', function () {
     return view('welcome');
 });
@@ -66,6 +67,18 @@ Route::get('user/{nama}/{nilaii?}', function ($nama, $nilaii = 'nilai eror'){
 
 
 
+Route::get('ContohController2', 'ContohController@latihan2');
 
+Route::get('profil', 'ContohController@latihan3');
+Route::get('profil2', 'ContohController@latihan4');
 
+Route::get('profill', 'biodata@bio');
 
+Route::get('pesanah/{menu?}/{menu2?}/{uk?}', 'biodata@pesann');
+
+Route::get('get-buku', 'Bukuu@index');
+Route::get('hitung', 'Bukuu@hitungbuku');
+Route::get('delete-buku/{id}', 'Bukuu@delete');
+Route::get('update-buku/{id}', 'Bukuu@update');
+
+Route::get('hm', 'Bukuu@buat');
